@@ -1,0 +1,4 @@
+com\banking\repositories\abstracts\BaseRepository.class
+com\banking\repositories\abstracts\CustomerRepository.class
+com\banking\repositories\abstracts\CorporateCustomerRepository.class
+com\banking\repositories\abstracts\IndividualCustomerRepository.class

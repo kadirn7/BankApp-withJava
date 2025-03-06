@@ -1,0 +1,3 @@
+com\banking\entities\concretes\CorporateCustomer.class
+com\banking\entities\concretes\IndividualCustomer.class
+com\banking\entities\abstracts\Customer.class

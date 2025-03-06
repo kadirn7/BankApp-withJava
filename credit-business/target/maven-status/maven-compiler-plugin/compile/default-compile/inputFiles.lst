@@ -1,0 +1,17 @@
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\abstracts\CorporateCustomerService.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\abstracts\CustomerService.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\abstracts\IndividualCustomerService.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\concretes\CorporateCustomerManager.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\concretes\IndividualCustomerManager.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\constants\CustomerMessages.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\dtos\requests\CreateCorporateCustomerRequest.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\dtos\requests\CreateIndividualCustomerRequest.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\dtos\responses\CorporateCustomerResponse.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\dtos\responses\CustomerResponse.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\dtos\responses\IndividualCustomerResponse.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\mappings\abstracts\CustomerMapperBase.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\mappings\CorporateCustomerMapper.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\mappings\IndividualCustomerMapper.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\rules\abstracts\CustomerBusinessRulesBase.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\rules\CorporateCustomerBusinessRules.java
+C:\Users\Kadir\source\Java\BankAppWithJava\credit-business\src\main\java\com\banking\business\rules\IndividualCustomerBusinessRules.java
