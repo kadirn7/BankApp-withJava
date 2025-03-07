@@ -8,5 +8,6 @@ public interface IndividualCustomerService extends CustomerService<IndividualCus
     IndividualCustomerResponse add(CreateIndividualCustomerRequest request);
     List<IndividualCustomerResponse> getAllIndividuals();
     IndividualCustomerResponse getByNationalIdentity(String nationalIdentity);
+    IndividualCustomerResponse getById(Long id);
     void delete(Long id);
 } 

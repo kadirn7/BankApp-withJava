@@ -11,6 +11,7 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/individual-customers")
 @AllArgsConstructor
-@Tag(name = "Individual Customers", description = "Individual Customer API")
+@Tag(name = "Individual Customers", description = "Individual Customer Management APIs")
 public class IndividualCustomersController {
     private final IndividualCustomerService individualCustomerService;
 
@@ -33,10 +34,16 @@ public class IndividualCustomersController {
         return individualCustomerService.add(request);
     }
 
-    @GetMapping
     @Operation(summary = "Get all individual customers")
-    public List<IndividualCustomerResponse> getAll() {
-        return individualCustomerService.getAllIndividuals();
+    @GetMapping
+    public ResponseEntity<List<IndividualCustomerResponse>> getAll() {
+        return ResponseEntity.ok(individualCustomerService.getAllIndividuals());
+    }
+
+    @Operation(summary = "Get individual customer by ID")
+    @GetMapping("/{id}")
+    public ResponseEntity<IndividualCustomerResponse> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(individualCustomerService.getById(id));
     }
 
     @GetMapping("/national-identity/{nationalIdentity}")

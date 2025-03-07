@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-03-06T17:10:54+0300",
+    date = "2025-03-07T13:02:14+0300",
     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.41.0.z20250213-2037, environment: Java 21.0.6 (Eclipse Adoptium)"
 )
 @Component
@@ -22,13 +22,15 @@ public class CorporateCustomerMapperImpl implements CorporateCustomerMapper {
 
         CorporateCustomerResponse corporateCustomerResponse = new CorporateCustomerResponse();
 
-        corporateCustomerResponse.setAddress( entity.getAddress() );
-        corporateCustomerResponse.setEmail( entity.getEmail() );
         corporateCustomerResponse.setId( entity.getId() );
-        corporateCustomerResponse.setPhoneNumber( entity.getPhoneNumber() );
-        corporateCustomerResponse.setCompanyName( entity.getCompanyName() );
+        corporateCustomerResponse.setCustomerNumber( entity.getCustomerNumber() );
         corporateCustomerResponse.setTaxNumber( entity.getTaxNumber() );
+        corporateCustomerResponse.setCompanyName( entity.getCompanyName() );
         corporateCustomerResponse.setTradeRegisterNumber( entity.getTradeRegisterNumber() );
+        corporateCustomerResponse.setEmail( entity.getEmail() );
+        corporateCustomerResponse.setPhoneNumber( entity.getPhoneNumber() );
+        corporateCustomerResponse.setAddress( entity.getAddress() );
+        corporateCustomerResponse.setContactPerson( entity.getContactPerson() );
 
         return corporateCustomerResponse;
     }
@@ -45,6 +47,7 @@ public class CorporateCustomerMapperImpl implements CorporateCustomerMapper {
         corporateCustomer.setEmail( request.getEmail() );
         corporateCustomer.setPhoneNumber( request.getPhoneNumber() );
         corporateCustomer.setCompanyName( request.getCompanyName() );
+        corporateCustomer.setContactPerson( request.getContactPerson() );
         corporateCustomer.setTaxNumber( request.getTaxNumber() );
         corporateCustomer.setTradeRegisterNumber( request.getTradeRegisterNumber() );
 

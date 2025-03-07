@@ -11,6 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CustomerResponse {
     private Long id;
+    private String customerNumber;
     private String email;
     private String phoneNumber;
     private String address;

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-03-06T17:10:54+0300",
+    date = "2025-03-07T13:02:15+0300",
     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.41.0.z20250213-2037, environment: Java 21.0.6 (Eclipse Adoptium)"
 )
 @Component
@@ -22,13 +22,15 @@ public class IndividualCustomerMapperImpl implements IndividualCustomerMapper {
 
         IndividualCustomerResponse individualCustomerResponse = new IndividualCustomerResponse();
 
-        individualCustomerResponse.setAddress( entity.getAddress() );
-        individualCustomerResponse.setEmail( entity.getEmail() );
         individualCustomerResponse.setId( entity.getId() );
-        individualCustomerResponse.setPhoneNumber( entity.getPhoneNumber() );
+        individualCustomerResponse.setCustomerNumber( entity.getCustomerNumber() );
         individualCustomerResponse.setFirstName( entity.getFirstName() );
         individualCustomerResponse.setLastName( entity.getLastName() );
+        individualCustomerResponse.setEmail( entity.getEmail() );
+        individualCustomerResponse.setPhoneNumber( entity.getPhoneNumber() );
+        individualCustomerResponse.setAddress( entity.getAddress() );
         individualCustomerResponse.setNationalIdentity( entity.getNationalIdentity() );
+        individualCustomerResponse.setBirthDate( entity.getBirthDate() );
 
         return individualCustomerResponse;
     }
@@ -44,6 +46,7 @@ public class IndividualCustomerMapperImpl implements IndividualCustomerMapper {
         individualCustomer.setAddress( request.getAddress() );
         individualCustomer.setEmail( request.getEmail() );
         individualCustomer.setPhoneNumber( request.getPhoneNumber() );
+        individualCustomer.setBirthDate( request.getBirthDate() );
         individualCustomer.setFirstName( request.getFirstName() );
         individualCustomer.setLastName( request.getLastName() );
         individualCustomer.setNationalIdentity( request.getNationalIdentity() );
