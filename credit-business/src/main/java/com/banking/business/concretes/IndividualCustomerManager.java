@@ -9,6 +9,8 @@ import com.banking.core.crossCuttingConcerns.exceptions.types.BusinessException;
 import com.banking.entities.concretes.IndividualCustomer;
 import com.banking.repositories.abstracts.IndividualCustomerRepository;
 import lombok.AllArgsConstructor;
+import com.banking.business.dtos.responses.PagedResponse;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -64,5 +66,13 @@ public class IndividualCustomerManager implements IndividualCustomerService {
     public IndividualCustomerResponse getById(Long id) {
         return mapper.toResponse(repository.findById(id).orElseThrow(()
          -> new BusinessException("Customer not found")));
+    }
+
+
+    @Override
+    public PagedResponse<IndividualCustomerResponse> getAllIndividualsPaged(Pageable pageable) {
+        var page = repository.findAll(pageable)
+            .map(mapper::toResponse);
+        return PagedResponse.fromPage(page);
     }
 } 

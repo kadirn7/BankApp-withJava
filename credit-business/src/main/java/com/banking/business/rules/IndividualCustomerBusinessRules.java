@@ -14,17 +14,17 @@ public class IndividualCustomerBusinessRules implements CustomerBusinessRulesBas
 
     public void checkIfEmailExists(String email) {
         if (repository.existsByEmail(email)){
-            throw new BusinessException(CustomerMessages.EMAIL_ALREADY_EXISTS);
+            throw new BusinessException(String.format(CustomerMessages.EMAIL_ALREADY_EXISTS, email));
         }
     }
 
     public void checkIfPhoneNumberExists(String phoneNumber) {
         if (repository.existsByPhoneNumber(phoneNumber))
-            throw new BusinessException(CustomerMessages.PHONE_NUMBER_ALREADY_EXISTS);
+            throw new BusinessException(String.format(CustomerMessages.PHONE_NUMBER_ALREADY_EXISTS, phoneNumber));
     }
 
     public void checkIfNationalIdentityExists(String nationalIdentity) {
         if (repository.existsByNationalIdentity(nationalIdentity))
-            throw new BusinessException(CustomerMessages.NATIONAL_IDENTITY_ALREADY_EXISTS);
+            throw new BusinessException(String.format(CustomerMessages.NATIONAL_IDENTITY_ALREADY_EXISTS, nationalIdentity));
     }
 }

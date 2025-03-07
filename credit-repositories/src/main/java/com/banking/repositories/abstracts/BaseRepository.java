@@ -6,4 +6,5 @@ import org.springframework.data.repository.NoRepositoryBean;
 
 @NoRepositoryBean
 public interface BaseRepository<T extends BaseEntity<ID>, ID> extends JpaRepository<T, ID> {
+    boolean existsByCustomerNumber(String customerNumber);
 } 

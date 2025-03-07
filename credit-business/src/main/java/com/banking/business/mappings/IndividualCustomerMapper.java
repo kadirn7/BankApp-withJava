@@ -21,6 +21,5 @@ public interface IndividualCustomerMapper extends CustomerMapperBase<IndividualC
     IndividualCustomerResponse toResponse(IndividualCustomer entity);
     
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "customerNumber", ignore = true)
     IndividualCustomer toEntity(CreateIndividualCustomerRequest request);
 } 

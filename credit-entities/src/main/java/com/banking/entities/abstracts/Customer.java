@@ -14,9 +14,8 @@ public abstract class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(unique = true)
+    @Column(name = "customer_number", unique = true)
     private String customerNumber;
-    
     private String email;
     private String phoneNumber;
     private String address;
