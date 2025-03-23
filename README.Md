@@ -53,7 +53,6 @@ Proje, modüler bir yapıda tasarlanmış olup aşağıdaki modüllerden oluşma
 - Security endpoints
 
 ## Mimari Yapı
-Bu proje, monolitik bir REST API uygulamasıdır. Tüm modüller tek bir uygulama içinde çalışır ve aynı veritabanını paylaşır. Modüler yapı, kodun organizasyonu ve bakımı için kullanılmaktadır.
 
 ### Katmanlı Mimari
 1. **Web Katmanı** (credit-webapi)
@@ -145,51 +144,6 @@ mvn spring-boot:run -pl credit-webapi
 ## API Dokümantasyonu
 Swagger UI: `http://localhost:8080/swagger-ui/index.html`
 OpenAPI JSON: `http://localhost:8080/v3/api-docs`
-
-## Veritabanı Şeması
-### Müşteri Tabloları
-- customers (abstract)
-  - id
-  - customer_number
-  - email
-  - phone_number
-  - address
-
-- individual_customers
-  - first_name
-  - last_name
-  - national_identity
-  - birth_date
-
-- corporate_customers
-  - company_name
-  - tax_number
-  - trade_register_number
-
-### Kredi Tabloları
-- credits
-  - id
-  - name
-  - description
-  - credit_type
-  - interest_rate
-  - minimum_amount
-  - maximum_amount
-  - minimum_term
-  - maximum_term
-
-- credit_applications
-  - id
-  - credit_id
-  - customer_id
-  - amount
-  - term
-  - monthly_payment
-  - total_payment
-  - status
-  - application_date
-  - response_date
-  - rejection_reason
 
 ## Katkıda Bulunma
 1. Bu repository'yi fork edin
