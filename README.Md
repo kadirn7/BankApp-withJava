@@ -1,7 +1,7 @@
 # Banka Kredi Sistemi
 
 ## Proje Açıklaması
-Bu proje, bir bankanın kredi sistemini yöneten Spring Boot tabanlı bir mikroservis uygulamasıdır. Sistem, bireysel ve kurumsal müşterilerin kredi başvurularını, onay süreçlerini ve kredi yönetimini sağlar.
+Bu proje, bir bankanın kredi sistemini yöneten Spring Boot tabanlı bir REST API uygulamasıdır. Sistem, bireysel ve kurumsal müşterilerin kredi başvurularını, onay süreçlerini ve kredi yönetimini sağlar.
 
 ## Teknolojiler
 - Java 17
@@ -51,6 +51,34 @@ Proje, modüler bir yapıda tasarlanmış olup aşağıdaki modüllerden oluşma
 - Exception handling
 - API endpoint'leri
 - Security endpoints
+
+## Mimari Yapı
+Bu proje, monolitik bir REST API uygulamasıdır. Tüm modüller tek bir uygulama içinde çalışır ve aynı veritabanını paylaşır. Modüler yapı, kodun organizasyonu ve bakımı için kullanılmaktadır.
+
+### Katmanlı Mimari
+1. **Web Katmanı** (credit-webapi)
+   - HTTP isteklerini karşılar
+   - Request/Response dönüşümlerini yapar
+   - API endpoint'lerini sunar
+
+2. **İş Mantığı Katmanı** (credit-business)
+   - İş kurallarını uygular
+   - Veri dönüşümlerini yapar
+   - Validasyonları gerçekleştirir
+
+3. **Veri Erişim Katmanı** (credit-repositories)
+   - Veritabanı işlemlerini yönetir
+   - Entity'ler üzerinde CRUD operasyonları gerçekleştirir
+
+4. **Entity Katmanı** (credit-entities)
+   - Veritabanı tablolarını temsil eder
+   - İlişkileri tanımlar
+   - Veri modelini oluşturur
+
+5. **Çekirdek Katman** (credit-core)
+   - Ortak bileşenleri içerir
+   - Güvenlik yapılandırmasını sağlar
+   - Utility sınıflarını barındırır
 
 ## Özellikler
 - Bireysel ve kurumsal müşteri yönetimi
